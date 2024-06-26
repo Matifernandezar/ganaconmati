@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #000;
+}
+
+.wrapper {
+  position: relative;
+  width: 90%;
+  max-width: 400px;
+  height: auto;
+  background: #000;
+  box-shadow: 0 0 50px #0ef;
+  border-radius: 20px;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.wrapper:hover {
+  animation: animate 1s linear infinite;
+}
+
+@keyframes animate {
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+h2 {
+  font-size: 30px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+img {
+  width: 80px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  position: relative;
+  margin: 20px 0;
+  width: 100%;
+  border-bottom: 2px solid #fff;
+}
+
+.input-group label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.input-group input {
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+  color: #fff;
+  padding: 0 5px;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.input-group input:focus ~ label,
+.input-group input:valid ~ label {
+  top: -5px;
+}
+
+.cta {
+  display: inline-block;
+  background-color: #0ef;
+  color: black;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 30px;
+  box-shadow: 0 0 10px #0ef;
+  transition: background-color 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.cta:hover {
+  background-color: #0bc;
+}
+
+.min-carga {
+  font-size: 18px;
+  color: #f4d03f;
+  margin-top: 20px;
+}
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 600px) {
+  .wrapper {
+    width: 95%;
+    padding: 15px;
+  }
+  
+  h2, h3 {
+    font-size: 24px;
+  }
+
+  img {
+    width: 60px;
+  }
+
+  p, .input-group input, .cta {
+    font-size: 14px;
+  }
+
+  .cta {
+    padding: 8px 16px;
+  }
+
+  .min-carga {
+    font-size: 16px;
+  }
+}

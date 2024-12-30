@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "https://www.https://ganaconmatias.vercel.app//:path*",
+      "destination": "https://www.betjam.top/:path*",
+      "permanent": true
+    }
+  ]
+}

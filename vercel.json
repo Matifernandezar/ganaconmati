@@ -1,8 +1,8 @@
 {
   "redirects": [
     {
-      "source": "https://ganaconmatias.vercel.app/:path*",
-      "destination": "https://betjam.top/:path*",
+      "source": "/(.*)",
+      "destination": "https://casinovirtual.online/$1",
       "permanent": true
     }
   ]

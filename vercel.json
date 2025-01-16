@@ -1,9 +1,1 @@
-{
-  "redirects": [
-    {
-      "source": "/(.*)",
-      "destination": "https://casinovirtual.online/$1",
-      "permanent": true
-    }
-  ]
-}
+

@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-.h1{
-   color: #fff;
-  font-size:1px;
-  }
+
 * {
   margin: 0;
   padding: 0;
@@ -46,7 +43,10 @@ body {
   align-items: center;
   text-align: center;
 }
-
+h1{
+   color: #fff;
+  font-size:1px;
+  }
 h2 {
   font-size: 30px;
   color: #fff;

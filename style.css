@@ -152,3 +152,15 @@ p {
     font-size: 16px;
   }
 }
+/* Estilo para fijar el botón de WhatsApp */
+.floating-button {
+  position: fixed;
+  bottom: 20px; /* Asegura que esté en la parte inferior */
+  right: 20px;  /* Asegura que esté en la parte derecha */
+  z-index: 9999; /* Asegura que el botón esté por encima de otros elementos */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+}

@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
         e.preventDefault();
         const name = document.getElementById('name').value;
         const whatsappNumber = '5492975815752'; // Reemplaza con tu número de WhatsApp
-        const message = `Hola, mi nombre es ${name}. Me gustaría tener más información para jugar.`;
+        const message = `Hola, mi nombre es ${name}. Me gustaría tener más información para poder jugar.`;
         const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
         window.open(url, '_blank');
     });

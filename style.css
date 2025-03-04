@@ -12,7 +12,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: #000;
+  background: #000; /* Fondo de pantalla negro */
 }
 
 .wrapper {
@@ -25,6 +25,16 @@ body {
   border-radius: 20px;
   padding: 20px;
   overflow: hidden;
+  text-align: center;
+  animation: backgroundColorChange 10s infinite alternate; /* Efecto de cambio de color en el contenedor */
+}
+
+@keyframes backgroundColorChange {
+  0% { background: #000; }
+  25% { background: #111; }
+  50% { background: #222; }
+  75% { background: #333; }
+  100% { background: #444; }
 }
 
 .wrapper:hover {
@@ -43,13 +53,51 @@ body {
   align-items: center;
   text-align: center;
 }
-h1{
-   color: #fff;
-  }
-h2 {
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Espacio entre los textos */
+  margin-bottom: 20px;
+}
+
+.title .first-text {
   font-size: 30px;
   color: #fff;
-  margin-bottom: 20px;
+  white-space: nowrap;
+}
+
+.sec-texts {
+  height: 30px;
+  line-height: 30px;
+  overflow: hidden;
+}
+
+.sec-texts li {
+  position: relative;
+  top: 0;
+  font-size: 30px;
+  color: #0ef;
+  list-style: none;
+  text-shadow: 0 0 10px #0ef;
+  animation: slide 8s steps(4) infinite, colorful 6s infinite;
+}
+
+@keyframes slide {
+  100% {
+    top: -120px;
+  }
+}
+
+@keyframes colorful {
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.sec-texts li span {
+  position: relative;
 }
 
 h3 {
@@ -133,9 +181,13 @@ p {
     width: 95%;
     padding: 15px;
   }
-  
-  h2, h3 {
+
+  .title .first-text, .sec-texts li {
     font-size: 24px;
+  }
+
+  h3 {
+    font-size: 20px;
   }
 
   img {
@@ -153,16 +205,4 @@ p {
   .min-carga {
     font-size: 16px;
   }
-}
-/* Estilo para fijar el botón de WhatsApp */
-.floating-button {
-  position: fixed;
-  bottom: 20px; /* Asegura que esté en la parte inferior */
-  right: 20px;  /* Asegura que esté en la parte derecha */
-  z-index: 9999; /* Asegura que el botón esté por encima de otros elementos */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: transparent;
-  border: none;
 }
